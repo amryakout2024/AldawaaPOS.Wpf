@@ -20,5 +20,20 @@ namespace AldawaaPOS
         {
             InitializeComponent();
         }
+
+        private void FaClose_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void FaMini_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void FaMax_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

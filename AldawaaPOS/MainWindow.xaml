@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AldawaaPOS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        Height="500" Width="800" WindowStartupLocation="CenterScreen" 
+        AllowsTransparency="True" Background="Transparent" WindowStyle="None" >
     <Window.Resources>
         <Style x:Key="btnStyle" TargetType="Button">
             <Setter Property="Margin" Value="10"/>
@@ -31,128 +33,372 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        
+        <Style x:Key="FaCloseStyle" TargetType="fa:ImageAwesome">
+            <Setter Property="Margin" Value="30,10,10,0"/>
+            <Setter Property="Width" Value="15"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Red"/>
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="1.1" ScaleY="1.1"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="1.1" ScaleY="1.1"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="FaMaxStyle" TargetType="fa:ImageAwesome">
+            <Setter Property="Margin" Value="30,10,0,0"/>
+            <Setter Property="Width" Value="15"/>
+            <Setter Property="Height" Value="15"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Red"/>
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="1.1" ScaleY="1.1"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="1.1" ScaleY="1.1"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="FaMiniStyle" TargetType="fa:ImageAwesome">
+            <Setter Property="Margin" Value="0,10,0,0"/>
+            <Setter Property="Width" Value="15"/>
+            <Setter Property="Height" Value="15"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Red"/>
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="1.1" ScaleY="1.1"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="1.1" ScaleY="1.1"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+
+            </Style.Triggers>
+        </Style>
+
+
     </Window.Resources>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
-        <StackPanel 
+    <Border Background="White" BorderThickness="0.4" BorderBrush="DarkBlue"
+            CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel 
             Orientation="Horizontal"
             Grid.Row="0"
+            HorizontalAlignment="Right">
+                <fa:ImageAwesome Icon="WindowMinimize" Style="{StaticResource FaMiniStyle}" Name="FaMini" MouseDown="FaMini_MouseDown"/>
+                <fa:ImageAwesome Icon="WindowMaximize" Style="{StaticResource FaMaxStyle}" Name="FaMax" MouseDown="FaMax_MouseDown"/>
+                <fa:ImageAwesome Icon="Close" Style="{StaticResource FaCloseStyle}" Name="FaClose" MouseDown="FaClose_MouseDown"/>
+            </StackPanel>
+            <StackPanel 
+            Orientation="Horizontal"
+            Grid.Row="1" Margin="0,0,0,10"
             HorizontalAlignment="Center">
-            <StackPanel Orientation="Vertical">
-                <Label Grid.Row="0"
+                <StackPanel Orientation="Vertical">
+                    <Label Grid.Row="0"
                   Foreground="DarkBlue"     
                    VerticalAlignment="Center"
             Content="Welcome to Aldawaa Pharmacy"
             FontSize="30">
-                </Label>
-                <Separator
+                    </Label>
+                    <Separator
                     Margin="25,0,25,0"
                     Background="Gold"/>
-            </StackPanel>
-            <Image 
+                </StackPanel>
+                <Image 
                 Height="50"
                 VerticalAlignment="Center"
                 Source="/Images/aldawaa.png"/>
-        </StackPanel>
+            </StackPanel>
 
-        <Grid 
-            Grid.Row="1">
+            <Grid 
+            Grid.Row="2">
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Button 
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button 
             Grid.Row="0" Grid.Column="0"
             Content="Aldawaa POS">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Margin" Value="10"/>
-                        <Setter Property="FontSize" Value="25"/>
-                        <Setter Property="Background" Value="DarkGreen"/>
-                        <Setter Property="Foreground" Value="White"/>
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Border 
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Margin" Value="10,0,0,10"/>
+                            <Setter Property="FontSize" Value="25"/>
+                            <Setter Property="Background" Value="DarkGreen"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border 
                             BorderThickness="1" 
                             CornerRadius="10" 
                             Background="{TemplateBinding Background}" 
                             Padding="5">
-                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="DarkBlue"/>
-                                <Setter Property="Foreground" Value="Gold"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="DarkBlue"/>
+                                    <Setter Property="Foreground" Value="Gold"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseCaptured" Value="True">
+                                    <Setter Property="Background" Value="DodgerBlue"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
 
-                </Button.Style>
+                    </Button.Style>
 
-            </Button>
-            <Button 
-                Background="SeaGreen"
-            Style="{StaticResource btnStyle}"
+                </Button>
+                <Button 
             Grid.Row="0" Grid.Column="1"
             Content="Update Batch">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Margin" Value="10,0,10,10"/>
+                            <Setter Property="FontSize" Value="25"/>
+                            <Setter Property="Background" Value="SeaGreen"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border 
+                            BorderThickness="1" 
+                            CornerRadius="10" 
+                            Background="{TemplateBinding Background}" 
+                            Padding="5">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="DarkBlue"/>
+                                    <Setter Property="Foreground" Value="Gold"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseCaptured" Value="True">
+                                    <Setter Property="Background" Value="DodgerBlue"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
 
-            </Button>
-            <Button 
-                Background="DarkBlue"
-            Style="{StaticResource btnStyle}"
+                            </Style.Triggers>
+                        </Style>
+
+                    </Button.Style>
+                </Button>
+                <Button 
             Grid.Row="1" Grid.Column="0"
             Content="Control Panel">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Margin" Value="10,0,0,10"/>
+                            <Setter Property="FontSize" Value="25"/>
+                            <Setter Property="Background" Value="SaddleBrown"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border 
+                            BorderThickness="1" 
+                            CornerRadius="10" 
+                            Background="{TemplateBinding Background}" 
+                            Padding="5">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="DarkBlue"/>
+                                    <Setter Property="Foreground" Value="Gold"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseCaptured" Value="True">
+                                    <Setter Property="Background" Value="DodgerBlue"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
 
-            </Button>
-            <Button 
-                Background="DarkSlateBlue"
-            Style="{StaticResource btnStyle}"
+                            </Style.Triggers>
+                        </Style>
+
+                    </Button.Style>
+                </Button>
+                <Button 
             Grid.Row="1" Grid.Column="1"
             Content="Back Office">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Margin" Value="10,0,10,10"/>
+                            <Setter Property="FontSize" Value="25"/>
+                            <Setter Property="Background" Value="Firebrick"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border 
+                            BorderThickness="1" 
+                            CornerRadius="10" 
+                            Background="{TemplateBinding Background}" 
+                            Padding="5">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="DarkBlue"/>
+                                    <Setter Property="Foreground" Value="Gold"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseCaptured" Value="True">
+                                    <Setter Property="Background" Value="DodgerBlue"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
 
-            </Button>
-            <Button 
-                Background="IndianRed"
-            Style="{StaticResource btnStyle}"
+                            </Style.Triggers>
+                        </Style>
+
+                    </Button.Style>
+                </Button>
+                <Button 
             Grid.Row="2" Grid.Column="0"
             Content="Restart">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Margin" Value="10,0,0,0"/>
+                            <Setter Property="FontSize" Value="25"/>
+                            <Setter Property="Background" Value="IndianRed"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border 
+                            BorderThickness="1" 
+                            CornerRadius="10" 
+                            Background="{TemplateBinding Background}" 
+                            Padding="5">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="DarkBlue"/>
+                                    <Setter Property="Foreground" Value="Gold"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseCaptured" Value="True">
+                                    <Setter Property="Background" Value="DodgerBlue"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
 
-            </Button>
-            <Button 
-                Background="DarkRed"
-            Style="{StaticResource btnStyle}"
+                            </Style.Triggers>
+                        </Style>
+
+                    </Button.Style>
+
+                </Button>
+                <Button 
             Grid.Row="2" Grid.Column="1"
             Content="Shut down">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Margin" Value="10,0,10,0"/>
+                            <Setter Property="FontSize" Value="25"/>
+                            <Setter Property="Background" Value="DarkRed"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border 
+                            BorderThickness="1" 
+                            CornerRadius="10" 
+                            Background="{TemplateBinding Background}" 
+                            Padding="5">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="DarkBlue"/>
+                                    <Setter Property="Foreground" Value="Gold"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseCaptured" Value="True">
+                                    <Setter Property="Background" Value="DodgerBlue"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
 
-            </Button>
-        </Grid>
+                            </Style.Triggers>
+                        </Style>
 
-        <StackPanel Orientation="Horizontal" 
-            Grid.Row="2"
+                    </Button.Style>
+
+                </Button>
+            </Grid>
+
+            <StackPanel Orientation="Horizontal" 
+            Grid.Row="3" Margin="0,0,5,5"
             HorizontalAlignment="Right">
-            <Label Grid.Row="2"
+                <Label Grid.Row="2"
                    Foreground="Gray"
             Content="Copy right @2015 DMSCO"
                    VerticalAlignment="Center"
             FontSize="15"/>
-            <Image Height="40"
+                <Image Height="40"
                 VerticalAlignment="Center"
                 Source="/Images/dmsco.png"/>
-        </StackPanel>
+            </StackPanel>
 
-    </Grid>
+        </Grid>
+    </Border>
 </Window>
