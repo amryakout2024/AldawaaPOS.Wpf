@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\aldawaa.png" />
+    <None Remove="Images\dmsco.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\aldawaa.png" />
+    <Resource Include="Images\dmsco.png" />
+  </ItemGroup>
+
+</Project>
