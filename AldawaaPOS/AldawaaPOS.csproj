@@ -10,7 +10,9 @@
 
   <ItemGroup>
     <None Remove="Images\aldawaa.png" />
+    <None Remove="Images\aldawaa2.PNG" />
     <None Remove="Images\dmsco.png" />
+    <None Remove="Images\dmsco2.PNG" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,7 +21,13 @@
 
   <ItemGroup>
     <Resource Include="Images\aldawaa.png" />
+    <Resource Include="Images\aldawaa2.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\dmsco.png" />
+    <Resource Include="Images\dmsco2.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
