@@ -173,8 +173,8 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Button 
-            Grid.Row="0" Grid.Column="0"
-            Content="POS Login">
+            Grid.Row="0" Grid.Column="0" Click="login_Click"
+            Content="POS Login" x:Name="login">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Margin" Value="10,0,0,10"/>
@@ -209,7 +209,7 @@
                     </Button.Style>
 
                 </Button>
-                <Button 
+                <Button x:Name="updateBatch" Click="updateBatch_Click"
             Grid.Row="0" Grid.Column="1"
             Content="Update Batch">
                     <Button.Style>
@@ -247,7 +247,7 @@
                     </Button.Style>
                 </Button>
                 <Button 
-            Grid.Row="1" Grid.Column="0"
+            Grid.Row="1" Grid.Column="0" x:Name="controlPanel" Click="controlPanel_Click"
             Content="Control Panel">
                     <Button.Style>
                         <Style TargetType="Button">
@@ -283,7 +283,7 @@
 
                     </Button.Style>
                 </Button>
-                <Button 
+                <Button x:Name="backOffice" Click="backOffice_Click"
             Grid.Row="1" Grid.Column="1"
             Content="Back Office">
                     <Button.Style>
@@ -320,12 +320,12 @@
 
                     </Button.Style>
                 </Button>
-                <Button 
+                <Button x:Name="restart" Click="restart_Click"
             Grid.Row="2" Grid.Column="0"
             Content="Restart">
                     <Button.Style>
                         <Style TargetType="Button">
-                            <Setter Property="Margin" Value="10,0,0,0"/>
+                            <Setter Property="Margin" Value="10,0,0,10"/>
                             <Setter Property="FontSize" Value="25"/>
                             <Setter Property="Background" Value="IndianRed"/>
                             <Setter Property="Foreground" Value="White"/>
@@ -358,12 +358,12 @@
                     </Button.Style>
 
                 </Button>
-                <Button 
+                <Button x:Name="shoutDown"
             Grid.Row="2" Grid.Column="1"
-            Content="Shut down">
+            Content="Shut down" Click="shoutDown_Click">
                     <Button.Style>
                         <Style TargetType="Button">
-                            <Setter Property="Margin" Value="10,0,10,0"/>
+                            <Setter Property="Margin" Value="10,0,10,10"/>
                             <Setter Property="FontSize" Value="25"/>
                             <Setter Property="Background" Value="DarkRed"/>
                             <Setter Property="Foreground" Value="White"/>
