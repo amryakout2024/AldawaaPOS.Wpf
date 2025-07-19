@@ -13,6 +13,7 @@
     <None Remove="Images\aldawaa2.PNG" />
     <None Remove="Images\dmsco.png" />
     <None Remove="Images\dmsco2.PNG" />
+    <None Remove="Models\aldawaa10.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,10 +29,10 @@
     <Resource Include="Images\dmsco2.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Models\aldawaa10.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
 

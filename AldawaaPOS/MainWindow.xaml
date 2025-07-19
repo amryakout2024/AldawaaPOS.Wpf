@@ -120,8 +120,12 @@
         </Style>
 
     </Window.Resources>
-    <Border Background="WhiteSmoke" BorderThickness="0.4" BorderBrush="Gold"
-            CornerRadius="10" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+    <Border 
+        Background="WhiteSmoke"
+        BorderThickness="0.4" 
+        BorderBrush="Gold"
+        CornerRadius="10" 
+        MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
