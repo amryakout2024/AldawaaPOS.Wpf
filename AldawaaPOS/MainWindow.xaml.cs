@@ -105,11 +105,11 @@ namespace AldawaaPOS
 
         private void login_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow();
+            LoginWindow loginWindow = new LoginWindow(this);
 
-            //this.Hide();
+            this.Hide();
 
-            loginWindow.ShowDialog();
+            loginWindow.Show();
         }
 
         private void controlPanel_Click(object sender, RoutedEventArgs e)

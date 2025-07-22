@@ -19,9 +19,44 @@ namespace AldawaaPOS.Views
     /// </summary>
     public partial class LoginWindow : Window
     {
-        public LoginWindow()
+        private readonly MainWindow _mainWindow;
+
+        public LoginWindow(MainWindow mainWindow)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
+        }
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                if (e.ChangedButton == MouseButton.Left)
+                {
+                    this.DragMove();
+                }
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void FaClose_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _mainWindow.Show();
+            this.Close();
+        }
+
+        private void FaMini_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (lw.WindowState == WindowState.Normal)
+            {
+                lw.WindowState = WindowState.Minimized;
+            }
+            else if (lw.WindowState == WindowState.Maximized)
+            {
+                lw.WindowState = WindowState.Minimized;
+            }
+
         }
     }
 }
