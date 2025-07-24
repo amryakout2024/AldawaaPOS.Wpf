@@ -32,8 +32,4 @@
     <Resource Include="Models\aldawaa10.jpg" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
-
 </Project>

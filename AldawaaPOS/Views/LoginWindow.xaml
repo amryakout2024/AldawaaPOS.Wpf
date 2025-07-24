@@ -6,13 +6,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AldawaaPOS.Views"
         mc:Ignorable="d" ResizeMode="NoResize"
-        Height="500" Width="500" WindowStyle="None"
+        Height="700" Width="500" WindowStyle="None"
         Background="Transparent" x:Name="lw" AllowsTransparency="True"
         WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style x:Key="StaffIdTextBoxStyle" TargetType="{x:Type TextBox}">
             <Setter Property="Tag" Value="Staff Id"/>
-            <Setter Property="Width" Value="465"/>
+            <Setter Property="Width" Value="480"/>
             <Setter Property="Height" Value="40"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="HorizontalContentAlignment" Value="Left"/>
@@ -24,6 +24,7 @@
             <Setter Property="TextWrapping" Value="Wrap"/>
             <Setter Property="Cursor" Value="IBeam"/>
             <Setter Property="Padding" Value="3 1"/>
+            <Setter Property="Margin" Value="0,10,0,5"/>
             <Setter Property="BorderBrush" Value="DarkBlue"/>
             <Setter Property="BorderThickness" Value="0.5"/>
             <Setter Property="Validation.ErrorTemplate">
@@ -92,7 +93,7 @@
         </Style>
         <Style x:Key="PasswordTextBoxStyle" TargetType="{x:Type TextBox}">
             <Setter Property="Tag" Value="Password"/>
-            <Setter Property="Width" Value="465"/>
+            <Setter Property="Width" Value="480"/>
             <Setter Property="Height" Value="40"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="HorizontalContentAlignment" Value="Left"/>
@@ -104,6 +105,7 @@
             <Setter Property="TextWrapping" Value="Wrap"/>
             <Setter Property="Cursor" Value="IBeam"/>
             <Setter Property="Padding" Value="3 1"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
             <Setter Property="BorderBrush" Value="DarkBlue"/>
             <Setter Property="BorderThickness" Value="0.5"/>
             <Setter Property="Validation.ErrorTemplate">
@@ -177,10 +179,10 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="0.4*"/>
-                <RowDefinition Height="0.4*"/>
-                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <StackPanel 
             Orientation="Horizontal"
@@ -195,48 +197,156 @@
                 Stretch="Fill"
                 Source="/Models/aldawaa10.jpg"/>
             
-            <TextBox
-                Grid.Row="2" 
-                    Style="{StaticResource StaffIdTextBoxStyle}"
+            <TextBox Grid.Row="2" 
+                KeyDown="Username_KeyDown"
+                Style="{StaticResource StaffIdTextBoxStyle}"
                 x:Name="Username"/>
-            
-            <TextBox
-                Grid.Row="3" Style="{StaticResource PasswordTextBoxStyle}"
+
+            <TextBox Grid.Row="3"
+                KeyDown="Password_KeyDown"
+                Style="{StaticResource PasswordTextBoxStyle}"
                 x:Name="Password"/>
             
-            <Button Height="50" Grid.Row="4" x:Name="btnLogin" 
-                            Content="Login" 
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button Content="7" Command="{Binding Calculator7Command}" Grid.Column="0" Grid.Row="0" Style="{StaticResource ButtonCalculatorStyle}"/>
+                <Button Content="8" Command="{Binding Calculator8Command}" Grid.Column="1" Grid.Row="0" Style="{StaticResource ButtonCalculatorStyle}"/>
+                <Button Content="9" Command="{Binding Calculator9Command}" Grid.Column="2" Grid.Row="0" Style="{StaticResource ButtonCalculatorStyle}"/>
+                <Button 
+                        Margin="1" 
+                        Grid.Row="0" Grid.Column="3" x:Name="btnLogin1" 
+                            Content="Del" Click="btnLogin_Click"
                             Command="{Binding LoginCommand}">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Background" Value="DarkGreen"/>
-                        <Setter Property="Foreground" Value="White"/>
-                        <Setter Property="Width" Value="180"/>
-                        <Setter Property="FontSize" Value="20"/>
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Border Background="{TemplateBinding Background}" BorderThickness="1"  CornerRadius="5" BorderBrush="Black">
-                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="DarkBlue"/>
-                                <Setter Property="Foreground" Value="Goldenrod"/>
-                            </Trigger>
-                            <Trigger Property="IsMouseCaptured" Value="True">
-                                <Setter Property="Background" Value="Goldenrod"/>
-                                <Setter Property="Foreground" Value="DarkBlue"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="DarkGreen"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="FontSize" Value="20"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}" BorderThickness="1"  CornerRadius="5" BorderBrush="Black">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="DarkBlue"/>
+                                    <Setter Property="Foreground" Value="Goldenrod"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseCaptured" Value="True">
+                                    <Setter Property="Background" Value="Goldenrod"/>
+                                    <Setter Property="Foreground" Value="DarkBlue"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <Button Content="4" Command="{Binding Calculator4Command}" Grid.Column="0" Grid.Row="1" Style="{StaticResource ButtonCalculatorStyle}"/>
+                <Button Content="5" Command="{Binding Calculator5Command}" Grid.Column="1" Grid.Row="1" Style="{StaticResource ButtonCalculatorStyle}"/>
+                <Button Content="6" Command="{Binding Calculator6Command}" Grid.Column="2" Grid.Row="1" Style="{StaticResource ButtonCalculatorStyle}"/>
+                <Button
+                        Margin="1"
+                        Grid.Row="1" Grid.Column="3" x:Name="btnLo2gin" 
+                            Content="C" Click="btnLogin_Click"
+                            Command="{Binding LoginCommand}">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="DarkGreen"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="FontSize" Value="20"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}" BorderThickness="1"  CornerRadius="5" BorderBrush="Black">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="DarkBlue"/>
+                                    <Setter Property="Foreground" Value="Goldenrod"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseCaptured" Value="True">
+                                    <Setter Property="Background" Value="Goldenrod"/>
+                                    <Setter Property="Foreground" Value="DarkBlue"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <Button Content="1" Command="{Binding Calculator1Command}" Grid.Column="0" Grid.Row="2" Style="{StaticResource ButtonCalculatorStyle}"/>
+                <Button Content="2" Command="{Binding Calculator2Command}" Grid.Column="1" Grid.Row="2" Style="{StaticResource ButtonCalculatorStyle}"/>
+                <Button Content="3" Command="{Binding Calculator3Command}" Grid.Column="2" Grid.Row="2" Style="{StaticResource ButtonCalculatorStyle}"/>
+       
+                <Button 
+                    Content="0" Grid.ColumnSpan="3"
+                    Command="{Binding Calculator0Command}" Grid.Column="0" Grid.Row="3" Style="{StaticResource ButtonCalculatorStyle}"/>
+                <Button
+                        Margin="1"
+                        Grid.Row="2" Grid.Column="3"
+                    Grid.RowSpan="2"
+                    x:Name="btnLogin" 
+                            Content="Login" Click="btnLogin_Click"
+                            Command="{Binding LoginCommand}">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="DarkGreen"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="FontSize" Value="20"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}" BorderThickness="1"  CornerRadius="5" BorderBrush="Black">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="DarkBlue"/>
+                                    <Setter Property="Foreground" Value="Goldenrod"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseCaptured" Value="True">
+                                    <Setter Property="Background" Value="Goldenrod"/>
+                                    <Setter Property="Foreground" Value="DarkBlue"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+            </Grid>
 
         </Grid>
     </Border>
 
 </Window>
+<!--<fa:FontAwesome 
+                Foreground="DarkBlue"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Margin="0,0,10,0"
+                FontSize="40" 
+                x:Name="fwKeyboard" MouseDown="fwKeyboard_MouseDown"
+                Grid.Row="4" 
+                Icon="KeyboardOutline"
+                />-->
