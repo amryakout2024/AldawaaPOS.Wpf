@@ -1,4 +1,5 @@
-﻿using AldawaaPOS.Views;
+﻿using AldawaaPOS.ViewModels;
+using AldawaaPOS.Views;
 using System.Diagnostics;
 using System.Text;
 using System.Windows;
@@ -106,6 +107,11 @@ namespace AldawaaPOS
         private void login_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow loginWindow = new LoginWindow(this);
+
+            //LoginWindow loginWindow = new LoginWindow(this)
+            //{
+            //    DataContext = new LoginVM()
+            //};
 
             this.Hide();
 

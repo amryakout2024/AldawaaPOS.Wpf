@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AldawaaPOS.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,18 +22,21 @@ namespace AldawaaPOS.Views
     {
         private readonly MainWindow _mainWindow;
         
-        public LoginWindow()
-        {
-            
-        }
+        LoginVM loginVM { get; set; }
 
         public LoginWindow(MainWindow mainWindow)
         {
+            loginVM = new LoginVM();
+            DataContext = loginVM;
             InitializeComponent();
-            _mainWindow = mainWindow;
-            Username.Focus();
-        }
 
+            Username.Focus();
+            _mainWindow = mainWindow;
+        }
+        protected override void OnActivated(EventArgs e)
+        {
+            base.OnActivated(e);
+        }
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             try
@@ -87,52 +91,17 @@ namespace AldawaaPOS.Views
             MessageBox.Show("Test"); ;
         }
 
-        private void fwKeyboard_MouseDown(object sender, MouseButtonEventArgs e)
+        private void EmpId_GotFocus(object sender, RoutedEventArgs e)
         {
-
+            loginVM.IsEmpIdFocused = true;
+            loginVM.IsPasswordFocused = false;
         }
 
-        private void btn0_Click(object sender, RoutedEventArgs e)
+        private void Password_GotFocus(object sender, RoutedEventArgs e)
         {
-
-        }
-        private void btn1_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void btn2_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void btn3_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void btn4_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void btn5_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void btn6_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void btn7_Click(object sender, RoutedEventArgs e)
-        {
-
+            loginVM.IsPasswordFocused = true;
+            loginVM.IsEmpIdFocused = false;
         }
 
-        private void btn8_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn9_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

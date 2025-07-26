@@ -40,13 +40,13 @@
             </Setter.Value>
         </Setter>
         <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
+            <!--<Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="DarkBlue"/>
                 <Setter Property="Foreground" Value="Goldenrod"/>
-            </Trigger>
+            </Trigger>-->
             <Trigger Property="IsMouseCaptured" Value="True">
-                <Setter Property="Background" Value="Goldenrod"/>
-                <Setter Property="Foreground" Value="DarkBlue"/>
+                <Setter Property="Background" Value="DarkBlue"/>
+                <Setter Property="Foreground" Value="Goldenrod"/>
             </Trigger>
         </Style.Triggers>
     </Style>
