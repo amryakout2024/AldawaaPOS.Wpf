@@ -36,6 +36,8 @@
                             <AdornedElementPlaceholder />
                             <ItemsControl
                                 Margin="0 5 0 0"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
                                       FontSize="12"
                                       ItemsSource="{Binding}">
                                 <ItemsControl.ItemTemplate>
@@ -118,7 +120,10 @@
                             <AdornedElementPlaceholder />
                             <ItemsControl
                                 Margin="0 5 0 0"
+                                VerticalAlignment="Center"
                                       FontSize="12"
+                                     HorizontalAlignment="Right"
+
                                       ItemsSource="{Binding}">
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate>
@@ -184,8 +189,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <StackPanel 
@@ -211,9 +216,14 @@
             <TextBox
                 Text="{Binding Password}"
                 Grid.Row="3" GotFocus="Password_GotFocus"
-                KeyDown="Password_KeyDown"
                 Style="{StaticResource PasswordTextBoxStyle}"
-                x:Name="Password"/>
+                x:Name="Password">
+                <TextBox.InputBindings>
+                    <KeyBinding 
+                               Key="Enter" 
+                               Command="{Binding LoginCommand}" />
+                </TextBox.InputBindings>
+            </TextBox>
             
             <Grid Grid.Row="4">
                 <Grid.ColumnDefinitions>
@@ -228,12 +238,12 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Button 
-                    Content="7"  
+                <Button Content="7"
                     Command="{Binding Calculator7Command}" 
+                        Style="{StaticResource ButtonCalculatorStyle}"
                     Grid.Column="0" 
-                    Grid.Row="0" 
-                    Style="{StaticResource ButtonCalculatorStyle}"/>
+                    Grid.Row="0" >
+                </Button>
                 <Button Content="8" Command="{Binding Calculator8Command}" Grid.Column="1" Grid.Row="0" Style="{StaticResource ButtonCalculatorStyle}"/>
                 <Button Content="9"  Command="{Binding Calculator9Command}" Grid.Column="2" Grid.Row="0" Style="{StaticResource ButtonCalculatorStyle}"/>
                 <Button 
@@ -257,13 +267,13 @@
                                 </Setter.Value>
                             </Setter>
                             <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
+                                <!--<Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="DarkBlue"/>
                                     <Setter Property="Foreground" Value="Goldenrod"/>
-                                </Trigger>
+                                </Trigger>-->
                                 <Trigger Property="IsMouseCaptured" Value="True">
-                                    <Setter Property="Background" Value="Goldenrod"/>
-                                    <Setter Property="Foreground" Value="DarkBlue"/>
+                                    <Setter Property="Background" Value="DarkBlue"/>
+                                    <Setter Property="Foreground" Value="Goldenrod"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -294,13 +304,13 @@
                                 </Setter.Value>
                             </Setter>
                             <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
+                                <!--<Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="DarkBlue"/>
                                     <Setter Property="Foreground" Value="Goldenrod"/>
-                                </Trigger>
+                                </Trigger>-->
                                 <Trigger Property="IsMouseCaptured" Value="True">
-                                    <Setter Property="Background" Value="Goldenrod"/>
-                                    <Setter Property="Foreground" Value="DarkBlue"/>
+                                    <Setter Property="Background" Value="DarkBlue"/>
+                                    <Setter Property="Foreground" Value="Goldenrod"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -341,13 +351,13 @@
                                 </Setter.Value>
                             </Setter>
                             <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
+                                <!--<Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="DarkBlue"/>
                                     <Setter Property="Foreground" Value="Goldenrod"/>
-                                </Trigger>
+                                </Trigger>-->
                                 <Trigger Property="IsMouseCaptured" Value="True">
-                                    <Setter Property="Background" Value="Goldenrod"/>
-                                    <Setter Property="Foreground" Value="DarkBlue"/>
+                                    <Setter Property="Background" Value="DarkBlue"/>
+                                    <Setter Property="Foreground" Value="Goldenrod"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>

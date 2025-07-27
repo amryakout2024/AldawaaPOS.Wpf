@@ -2,28 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:fa="http://schemas.fontawesome.io/icons/" xmlns:icons="http://metro.mahapps.com/winfx/xaml/iconpacks">
 
-    <Style x:Key="ButtonStyle" TargetType="Button">
-        <Setter Property="Foreground" Value="White"/>
-        <Setter Property="Background" Value="DarkSlateBlue"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border BorderThickness="1" CornerRadius="10" Background="{TemplateBinding Background}" Padding="5">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-        <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="Blue"/>
-            </Trigger>
-            <Trigger Property="IsMouseCaptured" Value="True">
-                <Setter Property="Background" Value="DodgerBlue"/>
-            </Trigger>
-        </Style.Triggers>
-    </Style>
-
 
     <Style x:Key="ButtonCalculatorStyle" TargetType="Button">
         <Setter Property="Background" Value="IndianRed"/>
@@ -33,17 +11,20 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}" BorderThickness="1"  CornerRadius="5" BorderBrush="Black">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Border 
+                        Background="{TemplateBinding Background}" 
+                        BorderThickness="1"  
+                        CornerRadius="5" 
+                        BorderBrush="Black">
+                        <ContentPresenter
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center">
+                        </ContentPresenter>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
         <Style.Triggers>
-            <!--<Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="DarkBlue"/>
-                <Setter Property="Foreground" Value="Goldenrod"/>
-            </Trigger>-->
             <Trigger Property="IsMouseCaptured" Value="True">
                 <Setter Property="Background" Value="DarkBlue"/>
                 <Setter Property="Foreground" Value="Goldenrod"/>

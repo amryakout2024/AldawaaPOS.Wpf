@@ -78,19 +78,6 @@ namespace AldawaaPOS.Views
             }
         }
 
-        private void Password_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                MessageBox.Show("Test"); ;
-            }
-        }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Test"); ;
-        }
-
         private void EmpId_GotFocus(object sender, RoutedEventArgs e)
         {
             loginVM.IsEmpIdFocused = true;

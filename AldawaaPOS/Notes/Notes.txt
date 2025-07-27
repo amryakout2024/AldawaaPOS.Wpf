@@ -1,0 +1,134 @@
+﻿    
+                        <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="IndianRed"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="FontSize" Value="20"/>
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                            <Setter Property="Margin" Value="1"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border 
+                                            Background="{TemplateBinding Background}" 
+                                            BorderThickness="1"  
+                                            CornerRadius="5" 
+                                            BorderBrush="Black">
+                                            <Grid>
+                                                <TextBlock Text="7"
+                                                    VerticalAlignment="Center"
+                                                    HorizontalAlignment="Center"
+                                                    x:Name="con"/>
+                                                <ContentPresenter                                                    
+                                                    HorizontalAlignment="Center" 
+                                                    VerticalAlignment="Center">
+                                                </ContentPresenter>
+                                            </Grid>
+                                        </Border>
+
+                                        <ControlTemplate.Triggers>
+                                            <DataTrigger 
+                                                Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseDirectlyOver}"
+                                                Value="true" >
+                                                <Setter Property="Margin" TargetName="con" Value="0,0,0,-10"/>
+                                                <!--<Setter Property="RenderTransform" TargetName="con">
+                                                    <Setter.Value>
+                                                        <ScaleTransform ScaleY="2"/>
+                                                    </Setter.Value>
+                                                </Setter>-->
+                                            </DataTrigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseCaptured" Value="True">
+                                    <Setter Property="Background" Value="DarkBlue"/>
+                                    <Setter Property="Foreground" Value="Goldenrod"/>
+                                </Trigger>
+                                <!--<Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Background" Value="Red"/>
+                                    <Setter Property="Foreground" Value="Goldenrod"/>
+                                </Trigger>-->
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+
+<!--<Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="DarkBlue"/>
+                <Setter Property="Foreground" Value="Goldenrod"/>
+            </Trigger>-->
+
+<!--<ControlTemplate.Triggers>
+                        <DataTrigger 
+                            Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsPressed}"
+                            Value="true" >
+                            <Setter Property="FontSize" TargetName="con" Value="30"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>-->
+
+<!--<DataTrigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <str Storyboard.TargetProperty="Margin"
+                                      Storyboard.TargetName="con"
+                                      Duration="0:0:0.1"
+                                      From="0,0,0,10"
+                                      To="0,10,0,0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </DataTrigger.EnterActions>-->
+<!--<DataTrigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ThicknessAnimation Storyboard.TargetProperty="Margin"
+                                      Storyboard.TargetName="_top"
+                                      Duration="0:0:0.1"
+                                      From="0,10,0,0"
+                                      To="0,0,0,10" />
+                                        <ThicknessAnimation Storyboard.TargetProperty="Margin"
+                                      Storyboard.TargetName="_bottom"
+                                      Duration="0:0:0.1"
+                                      From="0,10,0,0"
+                                      To="0,0,0,0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </DataTrigger.ExitActions>-->
+
+/*
+ * Process.Start("explorer.exe", "/select, c:\\teste");
+ * To open a folder instead of selecting it just change /select to /open
+ Syntax
+
+      SHUTDOWN [logoff_option]  [/m \\Computer] [options]
+
+logoff_option:
+    /i         Display the GUI (must be the first option)
+    /l         Log off. This cannot be used with /m or /d option
+    /s         Shutdown
+    /r         Shutdown and Restart
+    /a         Abort a system shutdown.
+               (only during the time-out period)
+    /p         Turn off the local computer with no time-out or warning
+               (only with /d)
+    /h         Hibernate the local computer (only with /f )
+    /e         Document the reason for an unexpected shutdown of a computer
+
+Options:
+
+   /m \\Computer  : A remote computer to shutdown.
+
+   /t:xxx         : Time until system shutdown in seconds. 
+                    The valid range is xxx=0-600 seconds. [default=30]
+   /c "Msg"       : An optional shutdown message [Max 127 chars]
+
+   /f             : Force running applications to close.
+                    This will not prompt for File-Save in any open applications.
+                    so will result in a loss of all unsaved data!!!
+
+   /d u:xx:yy     : List a USER reason code for the shutdown. 
+   /d P:xx:yy     : List a PLANNED reason code for the shutdown.
+                     xx Specifies the major reason code (0-255)
+                     yy Specifies the minor reason code (0-65536)
+ */

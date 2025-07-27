@@ -1,18 +1,21 @@
 ﻿using AldawaaPOS.Helpers;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AldawaaPOS.ViewModels
 {
-     class LoginVM:ViewModelBase
-     {
+     class LoginVM:ViewModelBase, INotifyDataErrorInfo
+    {
         private string empId;
         public string EmpId
         {
@@ -34,7 +37,6 @@ namespace AldawaaPOS.ViewModels
         }
 
         private bool isPasswordFocused;
-
         public bool IsPasswordFocused
         {
             get { return isPasswordFocused; }
@@ -55,9 +57,15 @@ namespace AldawaaPOS.ViewModels
         public ICommand CalculatorClearCommand { get; private set; }
         public ICommand CalculatorDeleteCommand { get; private set; }
 
+        private SetError _setError;
+        public event EventHandler<DataErrorsChangedEventArgs>? ErrorsChanged;
+        public bool HasErrors => _setError.HasErrors;
+
         public LoginVM()
         {
             ActivateCommands();
+            _setError = new SetError();
+            _setError.ErrorsChanged += _setError_ErrorsChanged;
 
         }
 
@@ -77,9 +85,31 @@ namespace AldawaaPOS.ViewModels
             CalculatorClearCommand = new ActionCommand(CalculatorClear);
             CalculatorDeleteCommand = new ActionCommand(CalculatorDelete);
         }
+
         private void Login()
         {
-            MessageBox.Show("Test");
+            _setError.ClearErrors(nameof(EmpId));
+            _setError.ClearErrors(nameof(Password));
+            if (!_setError.HasErrors)
+            {
+                var isEmpNumber = int.TryParse(EmpId, out _);
+
+                if (!string.IsNullOrEmpty(EmpId))
+                {
+                    if (isEmpNumber && ((EmpId.Length == 4) || (EmpId.Length == 4)))
+                    {
+                        MessageBox.Show("Login successfully");
+                    }
+                    else
+                    {
+                        _setError.AddError(nameof(EmpId), "Staff id must contains only 4 or 5 numbers");
+                    }
+                }
+                else
+                {
+                    _setError.AddError(nameof(EmpId), "Enter your Staff id");
+                }
+            }
         }
 
         private void GetCalculatorNumber(string number)
@@ -174,6 +204,16 @@ namespace AldawaaPOS.ViewModels
                     Password = Password.Remove(Password.Length - 1);
                 }
             }
+        }
+
+        private void _setError_ErrorsChanged(object sender, DataErrorsChangedEventArgs e)
+        {
+            ErrorsChanged?.Invoke(this, e);
+        }
+
+        public IEnumerable GetErrors(string propertyName)
+        {
+            return _setError.GetErrors(propertyName);
         }
     }
 }
