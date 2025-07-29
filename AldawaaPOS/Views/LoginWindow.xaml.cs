@@ -20,18 +20,18 @@ namespace AldawaaPOS.Views
     /// </summary>
     public partial class LoginWindow : Window
     {
-        private readonly MainWindow _mainWindow;
+        private readonly StartingWindow _startingWindow;
         
         LoginVM loginVM { get; set; }
 
-        public LoginWindow(MainWindow mainWindow)
+        public LoginWindow(StartingWindow startingWindow)
         {
             loginVM = new LoginVM();
             DataContext = loginVM;
             InitializeComponent();
 
             Username.Focus();
-            _mainWindow = mainWindow;
+            _startingWindow = startingWindow;
         }
         protected override void OnActivated(EventArgs e)
         {
@@ -53,7 +53,7 @@ namespace AldawaaPOS.Views
 
         private void FaClose_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            _mainWindow.Show();
+            _startingWindow.Show();
             this.Close();
         }
 

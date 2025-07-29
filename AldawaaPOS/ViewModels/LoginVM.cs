@@ -1,4 +1,5 @@
 ﻿using AldawaaPOS.Helpers;
+using AldawaaPOS.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System;
 using System.Collections;
@@ -96,9 +97,12 @@ namespace AldawaaPOS.ViewModels
 
                 if (!string.IsNullOrEmpty(EmpId))
                 {
-                    if (isEmpNumber && ((EmpId.Length == 4) || (EmpId.Length == 4)))
+                    if (isEmpNumber && ((EmpId.Length == 4) || (EmpId.Length == 5)))
                     {
-                        MessageBox.Show("Login successfully");
+                        MainWindow mainWindow = new MainWindow(EmpId);
+
+                        mainWindow.ShowDialog();
+                        
                     }
                     else
                     {
