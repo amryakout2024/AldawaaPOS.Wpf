@@ -4,60 +4,58 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AldawaaPOS"
-        mc:Ignorable="d" x:Name="mw"
+        mc:Ignorable="d" x:Name="mw" ResizeMode="NoResize"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         Height="500" Width="800" WindowStartupLocation="CenterScreen" 
         AllowsTransparency="True" Background="Transparent" WindowStyle="None" >
     <Window.Resources>
-
         <Style x:Key="StringStoryBoard" TargetType="TextBlock">
             <Style.Triggers>
                 <EventTrigger RoutedEvent="Window.Loaded">
                     <BeginStoryboard >
                         <Storyboard Storyboard.TargetProperty="Text">
                             <StringAnimationUsingKeyFrames>
-                                <DiscreteStringKeyFrame Value="C" KeyTime="0:0:0.1"/>
-                                <DiscreteStringKeyFrame Value="Co" KeyTime="0:0:0.2"/>
-                                <DiscreteStringKeyFrame Value="Cop" KeyTime="0:0:0.3"/>
-                                <DiscreteStringKeyFrame Value="Copy" KeyTime="0:0:0.4"/>
-                                <DiscreteStringKeyFrame Value="Copy " KeyTime="0:0:0.5"/>
-                                <DiscreteStringKeyFrame Value="Copy r" KeyTime="0:0:0.6"/>
-                                <DiscreteStringKeyFrame Value="Copy ri" KeyTime="0:0:0.7"/>
-                                <DiscreteStringKeyFrame Value="Copy rig" KeyTime="0:0:0.8"/>
-                                <DiscreteStringKeyFrame Value="Copy righ" KeyTime="0:0:0.9"/>
-                                <DiscreteStringKeyFrame Value="Copy right" KeyTime="0:0:1"/>
-                                <DiscreteStringKeyFrame Value="Copy right " KeyTime="0:0:1.1"/>
-                                <DiscreteStringKeyFrame Value="Copy right @" KeyTime="0:0:1.2"/>
-                                <DiscreteStringKeyFrame Value="Copy right @2" KeyTime="0:0:1.3"/>
-                                <DiscreteStringKeyFrame Value="Copy right @20" KeyTime="0:0:1.4"/>
-                                <DiscreteStringKeyFrame Value="Copy right @201" KeyTime="0:0:1.5"/>
-                                <DiscreteStringKeyFrame Value="Copy right @2015" KeyTime="0:0:1.6"/>
-                                <DiscreteStringKeyFrame Value="Copy right @2015 " KeyTime="0:0:1.7"/>
-                                <DiscreteStringKeyFrame Value="Copy right @2015 D" KeyTime="0:0:1.8"/>
-                                <DiscreteStringKeyFrame Value="Copy right @2015 DM" KeyTime="0:0:1.9"/>
-                                <DiscreteStringKeyFrame Value="Copy right @2015 DMS" KeyTime="0:0:2"/>
-                                <DiscreteStringKeyFrame Value="Copy right @2015 DMSC" KeyTime="0:0:2"/>
-                                <DiscreteStringKeyFrame Value="Copy right @2015 DMSCO" KeyTime="0:0:2.1"/>
+                                <DiscreteStringKeyFrame Value="C" KeyTime="0:0:0.3"/>
+                                <DiscreteStringKeyFrame Value="Co" KeyTime="0:0:0.4"/>
+                                <DiscreteStringKeyFrame Value="Cop" KeyTime="0:0:0.5"/>
+                                <DiscreteStringKeyFrame Value="Copy" KeyTime="0:0:0.6"/>
+                                <DiscreteStringKeyFrame Value="Copy " KeyTime="0:0:0.7"/>
+                                <DiscreteStringKeyFrame Value="Copy r" KeyTime="0:0:0.8"/>
+                                <DiscreteStringKeyFrame Value="Copy ri" KeyTime="0:0:0.9"/>
+                                <DiscreteStringKeyFrame Value="Copy rig" KeyTime="0:0:1"/>
+                                <DiscreteStringKeyFrame Value="Copy righ" KeyTime="0:0:1.1"/>
+                                <DiscreteStringKeyFrame Value="Copy right" KeyTime="0:0:1.2"/>
+                                <DiscreteStringKeyFrame Value="Copy right " KeyTime="0:0:1.3"/>
+                                <DiscreteStringKeyFrame Value="Copy right @" KeyTime="0:0:1.4"/>
+                                <DiscreteStringKeyFrame Value="Copy right @2" KeyTime="0:0:1.5"/>
+                                <DiscreteStringKeyFrame Value="Copy right @20" KeyTime="0:0:1.6"/>
+                                <DiscreteStringKeyFrame Value="Copy right @201" KeyTime="0:0:1.7"/>
+                                <DiscreteStringKeyFrame Value="Copy right @2015" KeyTime="0:0:1.8"/>
+                                <DiscreteStringKeyFrame Value="Copy right @2015 " KeyTime="0:0:1.9"/>
+                                <DiscreteStringKeyFrame Value="Copy right @2015 D" KeyTime="0:0:2"/>
+                                <DiscreteStringKeyFrame Value="Copy right @2015 DM" KeyTime="0:0:2.1"/>
+                                <DiscreteStringKeyFrame Value="Copy right @2015 DMS" KeyTime="0:0:2.2"/>
+                                <DiscreteStringKeyFrame Value="Copy right @2015 DMSC" KeyTime="0:0:2.3"/>
+                                <DiscreteStringKeyFrame Value="Copy right @2015 DMSCO" KeyTime="0:0:2.4"/>
                             </StringAnimationUsingKeyFrames>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
             </Style.Triggers>
         </Style>
-
     </Window.Resources>
     <Border 
         Background="WhiteSmoke"
         BorderThickness="0.4" 
         BorderBrush="Gold"
-        CornerRadius="10" 
+        CornerRadius="10" Padding="5"
         MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             
             <StackPanel 
@@ -102,23 +100,30 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button 
-            Grid.Row="0" Grid.Column="0" Click="login_Click"
+                <Button
+            Grid.Row="0" 
+                    Grid.Column="0"
+                    Click="login_Click"
             Content="POS Login" x:Name="login">
                     <Button.Style>
                         <Style TargetType="Button">
-                            <Setter Property="Margin" Value="10,0,0,10"/>
+                            <Setter Property="Margin" Value="5,0,0,5"/>
                             <Setter Property="FontSize" Value="25"/>
-                            <Setter Property="Background" Value="DarkGreen"/>
                             <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Background" Value="Green"/>
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                </Setter.Value>
+                            </Setter>
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="Button">
                                         <Border 
-                            BorderThickness="1" 
-                            CornerRadius="10" 
-                            Background="{TemplateBinding Background}" 
-                            Padding="5">
+                                            BorderThickness="1"
+                                            CornerRadius="10" 
+                                            Background="{TemplateBinding Background}" 
+                                            Padding="5">
                                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Border>
                                     </ControlTemplate>
@@ -128,6 +133,38 @@
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="DarkBlue"/>
                                     <Setter Property="Foreground" Value="Gold"/>
+                                    <Setter Property="FontSize" Value="27"/>
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1.01" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1.01" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation To="25"  Storyboard.TargetProperty="FontSize" Duration="0:0:0.3" />
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.ExitActions>
+
                                 </Trigger>
                                 <Trigger Property="IsMouseCaptured" Value="True">
                                     <Setter Property="Background" Value="DodgerBlue"/>
@@ -137,7 +174,6 @@
                         </Style>
 
                     </Button.Style>
-
                 </Button>
                 <Button x:Name="updateBatch" Click="updateBatch_Click"
             Grid.Row="0" Grid.Column="1"
@@ -148,14 +184,19 @@
                             <Setter Property="FontSize" Value="25"/>
                             <Setter Property="Background" Value="SeaGreen"/>
                             <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                </Setter.Value>
+                            </Setter>
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="Button">
                                         <Border 
-                            BorderThickness="1" 
-                            CornerRadius="10" 
-                            Background="{TemplateBinding Background}" 
-                            Padding="5">
+                                            BorderThickness="1"
+                                            CornerRadius="10" 
+                                            Background="{TemplateBinding Background}" 
+                                            Padding="5">
                                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Border>
                                     </ControlTemplate>
@@ -165,12 +206,43 @@
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="DarkBlue"/>
                                     <Setter Property="Foreground" Value="Gold"/>
+                                    <Setter Property="FontSize" Value="27"/>
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1.01" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1.01" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation To="25"  Storyboard.TargetProperty="FontSize" Duration="0:0:0.3" />
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.ExitActions>
+
                                 </Trigger>
                                 <Trigger Property="IsMouseCaptured" Value="True">
                                     <Setter Property="Background" Value="DodgerBlue"/>
                                     <Setter Property="Foreground" Value="White"/>
                                 </Trigger>
-
                             </Style.Triggers>
                         </Style>
 
@@ -185,14 +257,19 @@
                             <Setter Property="FontSize" Value="25"/>
                             <Setter Property="Background" Value="SaddleBrown"/>
                             <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                </Setter.Value>
+                            </Setter>
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="Button">
                                         <Border 
-                            BorderThickness="1" 
-                            CornerRadius="10" 
-                            Background="{TemplateBinding Background}" 
-                            Padding="5">
+                                            BorderThickness="1"
+                                            CornerRadius="10" 
+                                            Background="{TemplateBinding Background}" 
+                                            Padding="5">
                                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Border>
                                     </ControlTemplate>
@@ -202,12 +279,43 @@
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="DarkBlue"/>
                                     <Setter Property="Foreground" Value="Gold"/>
+                                    <Setter Property="FontSize" Value="27"/>
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1.01" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1.01" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation To="25"  Storyboard.TargetProperty="FontSize" Duration="0:0:0.3" />
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.ExitActions>
+
                                 </Trigger>
                                 <Trigger Property="IsMouseCaptured" Value="True">
                                     <Setter Property="Background" Value="DodgerBlue"/>
                                     <Setter Property="Foreground" Value="White"/>
                                 </Trigger>
-
                             </Style.Triggers>
                         </Style>
 
@@ -222,14 +330,19 @@
                             <Setter Property="FontSize" Value="25"/>
                             <Setter Property="Background" Value="Firebrick"/>
                             <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                </Setter.Value>
+                            </Setter>
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="Button">
                                         <Border 
-                            BorderThickness="1" 
-                            CornerRadius="10" 
-                            Background="{TemplateBinding Background}" 
-                            Padding="5">
+                                            BorderThickness="1"
+                                            CornerRadius="10" 
+                                            Background="{TemplateBinding Background}" 
+                                            Padding="5">
                                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Border>
                                     </ControlTemplate>
@@ -239,12 +352,43 @@
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="DarkBlue"/>
                                     <Setter Property="Foreground" Value="Gold"/>
+                                    <Setter Property="FontSize" Value="27"/>
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1.01" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1.01" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation To="25"  Storyboard.TargetProperty="FontSize" Duration="0:0:0.3" />
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.ExitActions>
+
                                 </Trigger>
                                 <Trigger Property="IsMouseCaptured" Value="True">
                                     <Setter Property="Background" Value="DodgerBlue"/>
                                     <Setter Property="Foreground" Value="White"/>
                                 </Trigger>
-
                             </Style.Triggers>
                         </Style>
 
@@ -259,14 +403,19 @@
                             <Setter Property="FontSize" Value="25"/>
                             <Setter Property="Background" Value="IndianRed"/>
                             <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                </Setter.Value>
+                            </Setter>
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="Button">
                                         <Border 
-                            BorderThickness="1" 
-                            CornerRadius="10" 
-                            Background="{TemplateBinding Background}" 
-                            Padding="5">
+                                            BorderThickness="1"
+                                            CornerRadius="10" 
+                                            Background="{TemplateBinding Background}" 
+                                            Padding="5">
                                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Border>
                                     </ControlTemplate>
@@ -276,12 +425,43 @@
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="DarkBlue"/>
                                     <Setter Property="Foreground" Value="Gold"/>
+                                    <Setter Property="FontSize" Value="27"/>
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1.01" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1.01" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation To="25"  Storyboard.TargetProperty="FontSize" Duration="0:0:0.3" />
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.ExitActions>
+
                                 </Trigger>
                                 <Trigger Property="IsMouseCaptured" Value="True">
                                     <Setter Property="Background" Value="DodgerBlue"/>
                                     <Setter Property="Foreground" Value="White"/>
                                 </Trigger>
-
                             </Style.Triggers>
                         </Style>
 
@@ -297,14 +477,19 @@
                             <Setter Property="FontSize" Value="25"/>
                             <Setter Property="Background" Value="DarkRed"/>
                             <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                </Setter.Value>
+                            </Setter>
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="Button">
                                         <Border 
-                            BorderThickness="1" 
-                            CornerRadius="10" 
-                            Background="{TemplateBinding Background}" 
-                            Padding="5">
+                                            BorderThickness="1"
+                                            CornerRadius="10" 
+                                            Background="{TemplateBinding Background}" 
+                                            Padding="5">
                                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Border>
                                     </ControlTemplate>
@@ -314,12 +499,43 @@
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="DarkBlue"/>
                                     <Setter Property="Foreground" Value="Gold"/>
+                                    <Setter Property="FontSize" Value="27"/>
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1.01" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1.01" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation To="25"  Storyboard.TargetProperty="FontSize" Duration="0:0:0.3" />
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
+                                                <DoubleAnimation 
+                                                    Duration="0:0:0.2"
+                                                    To="1" 
+                                                    Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.ExitActions>
+
                                 </Trigger>
                                 <Trigger Property="IsMouseCaptured" Value="True">
                                     <Setter Property="Background" Value="DodgerBlue"/>
                                     <Setter Property="Foreground" Value="White"/>
                                 </Trigger>
-
                             </Style.Triggers>
                         </Style>
 

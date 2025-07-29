@@ -1,19 +1,20 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿
+    <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:fa="http://schemas.fontawesome.io/icons/" xmlns:icons="http://metro.mahapps.com/winfx/xaml/iconpacks">
-
 
     <Style x:Key="ButtonCalculatorStyle" TargetType="Button">
         <Setter Property="Background" Value="IndianRed"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Padding" Value="0,0,0,0"/>
         <Setter Property="Margin" Value="1"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border 
                         Background="{TemplateBinding Background}" 
-                        BorderThickness="1"  
+                        BorderThickness="1" Padding="{TemplateBinding Padding}"
                         CornerRadius="5" 
                         BorderBrush="Black">
                         <ContentPresenter
@@ -25,9 +26,14 @@
             </Setter.Value>
         </Setter>
         <Style.Triggers>
-            <Trigger Property="IsMouseCaptured" Value="True">
+            <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="DarkBlue"/>
                 <Setter Property="Foreground" Value="Goldenrod"/>
+            </Trigger>
+            <Trigger Property="IsMouseCaptured" Value="True">
+                <Setter Property="Background" Value="Goldenrod"/>
+                <Setter Property="Foreground" Value="DarkBlue"/>
+                <Setter Property="Padding" Value="5,5,0,0"/>
             </Trigger>
         </Style.Triggers>
     </Style>
