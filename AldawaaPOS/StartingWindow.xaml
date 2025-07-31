@@ -111,6 +111,11 @@
                             <Setter Property="FontSize" Value="25"/>
                             <Setter Property="Foreground" Value="White"/>
                             <Setter Property="Background" Value="Green"/>
+                            <Setter Property="RenderTransformOrigin">
+                                <Setter.Value>
+                                    0.5,0.5
+                                </Setter.Value>
+                            </Setter>
                             <Setter Property="RenderTransform">
                                 <Setter.Value>
                                     <ScaleTransform ScaleX="1" ScaleY="1"/>
@@ -138,12 +143,12 @@
                                         <BeginStoryboard>
                                             <Storyboard>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
-                                                    To="1.01" 
+                                                    Duration="0:0:0.3"
+                                                    To="1.02" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
-                                                    To="1.01" 
+                                                    Duration="0:0:0.3"
+                                                    To="1.02" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
                                             </Storyboard>
                                         </BeginStoryboard>
@@ -154,11 +159,11 @@
                                             <Storyboard>
                                                 <DoubleAnimation To="25"  Storyboard.TargetProperty="FontSize" Duration="0:0:0.3" />
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
+                                                    Duration="0:0:0.3"
                                                     To="1" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
+                                                    Duration="0:0:0.3"
                                                     To="1" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
                                             </Storyboard>
@@ -184,6 +189,11 @@
                             <Setter Property="FontSize" Value="25"/>
                             <Setter Property="Background" Value="SeaGreen"/>
                             <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="RenderTransformOrigin">
+                                <Setter.Value>
+                                    0.5,0.5
+                                </Setter.Value>
+                            </Setter>
                             <Setter Property="RenderTransform">
                                 <Setter.Value>
                                     <ScaleTransform ScaleX="1" ScaleY="1"/>
@@ -211,12 +221,12 @@
                                         <BeginStoryboard>
                                             <Storyboard>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
-                                                    To="1.01" 
+                                                    Duration="0:0:0.3"
+                                                    To="1.02" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
-                                                    To="1.01" 
+                                                    Duration="0:0:0.3"
+                                                    To="1.02" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
                                             </Storyboard>
                                         </BeginStoryboard>
@@ -227,11 +237,11 @@
                                             <Storyboard>
                                                 <DoubleAnimation To="25"  Storyboard.TargetProperty="FontSize" Duration="0:0:0.3" />
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
+                                                    Duration="0:0:0.3"
                                                     To="1" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
+                                                    Duration="0:0:0.3"
                                                     To="1" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
                                             </Storyboard>
@@ -257,6 +267,11 @@
                             <Setter Property="FontSize" Value="25"/>
                             <Setter Property="Background" Value="SaddleBrown"/>
                             <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="RenderTransformOrigin">
+                                <Setter.Value>
+                                    0.5,0.5
+                                </Setter.Value>
+                            </Setter>
                             <Setter Property="RenderTransform">
                                 <Setter.Value>
                                     <ScaleTransform ScaleX="1" ScaleY="1"/>
@@ -284,12 +299,12 @@
                                         <BeginStoryboard>
                                             <Storyboard>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
-                                                    To="1.01" 
+                                                    Duration="0:0:0.3"
+                                                    To="1.02" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
-                                                    To="1.01" 
+                                                    Duration="0:0:0.3"
+                                                    To="1.02" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
                                             </Storyboard>
                                         </BeginStoryboard>
@@ -300,11 +315,11 @@
                                             <Storyboard>
                                                 <DoubleAnimation To="25"  Storyboard.TargetProperty="FontSize" Duration="0:0:0.3" />
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
+                                                    Duration="0:0:0.3"
                                                     To="1" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
+                                                    Duration="0:0:0.3"
                                                     To="1" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
                                             </Storyboard>
@@ -330,6 +345,11 @@
                             <Setter Property="FontSize" Value="25"/>
                             <Setter Property="Background" Value="Firebrick"/>
                             <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="RenderTransformOrigin">
+                                <Setter.Value>
+                                    0.5,0.5
+                                </Setter.Value>
+                            </Setter>
                             <Setter Property="RenderTransform">
                                 <Setter.Value>
                                     <ScaleTransform ScaleX="1" ScaleY="1"/>
@@ -357,12 +377,12 @@
                                         <BeginStoryboard>
                                             <Storyboard>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
-                                                    To="1.01" 
+                                                    Duration="0:0:0.3"
+                                                    To="1.02" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
-                                                    To="1.01" 
+                                                    Duration="0:0:0.3"
+                                                    To="1.02" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
                                             </Storyboard>
                                         </BeginStoryboard>
@@ -373,11 +393,11 @@
                                             <Storyboard>
                                                 <DoubleAnimation To="25"  Storyboard.TargetProperty="FontSize" Duration="0:0:0.3" />
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
+                                                    Duration="0:0:0.3"
                                                     To="1" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
+                                                    Duration="0:0:0.3"
                                                     To="1" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
                                             </Storyboard>
@@ -403,6 +423,11 @@
                             <Setter Property="FontSize" Value="25"/>
                             <Setter Property="Background" Value="IndianRed"/>
                             <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="RenderTransformOrigin">
+                                <Setter.Value>
+                                    0.5,0.5
+                                </Setter.Value>
+                            </Setter>
                             <Setter Property="RenderTransform">
                                 <Setter.Value>
                                     <ScaleTransform ScaleX="1" ScaleY="1"/>
@@ -430,12 +455,12 @@
                                         <BeginStoryboard>
                                             <Storyboard>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
-                                                    To="1.01" 
+                                                    Duration="0:0:0.3"
+                                                    To="1.02" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
-                                                    To="1.01" 
+                                                    Duration="0:0:0.3"
+                                                    To="1.02" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
                                             </Storyboard>
                                         </BeginStoryboard>
@@ -446,11 +471,11 @@
                                             <Storyboard>
                                                 <DoubleAnimation To="25"  Storyboard.TargetProperty="FontSize" Duration="0:0:0.3" />
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
+                                                    Duration="0:0:0.3"
                                                     To="1" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
+                                                    Duration="0:0:0.3"
                                                     To="1" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
                                             </Storyboard>
@@ -477,6 +502,11 @@
                             <Setter Property="FontSize" Value="25"/>
                             <Setter Property="Background" Value="DarkRed"/>
                             <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="RenderTransformOrigin">
+                                <Setter.Value>
+                                    0.5,0.5
+                                </Setter.Value>
+                            </Setter>
                             <Setter Property="RenderTransform">
                                 <Setter.Value>
                                     <ScaleTransform ScaleX="1" ScaleY="1"/>
@@ -504,12 +534,12 @@
                                         <BeginStoryboard>
                                             <Storyboard>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
-                                                    To="1.01" 
+                                                    Duration="0:0:0.3"
+                                                    To="1.02" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
-                                                    To="1.01" 
+                                                    Duration="0:0:0.3"
+                                                    To="1.02" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
                                             </Storyboard>
                                         </BeginStoryboard>
@@ -520,11 +550,11 @@
                                             <Storyboard>
                                                 <DoubleAnimation To="25"  Storyboard.TargetProperty="FontSize" Duration="0:0:0.3" />
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
+                                                    Duration="0:0:0.3"
                                                     To="1" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"/>
                                                 <DoubleAnimation 
-                                                    Duration="0:0:0.2"
+                                                    Duration="0:0:0.3"
                                                     To="1" 
                                                     Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"/>
                                             </Storyboard>
