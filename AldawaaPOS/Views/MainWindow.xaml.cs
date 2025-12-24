@@ -26,7 +26,7 @@ namespace AldawaaPOS.Views
         {
             InitializeComponent();
             _staffId = staffId;
-            StaffId.Text = staffId;
+            //StaffId.Text = staffId;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
