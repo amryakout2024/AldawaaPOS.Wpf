@@ -26,6 +26,7 @@
             VerticalAlignment="Center" FontSize="30"
             HorizontalAlignment="Center"
             Text="The main page is under construction"/>
+        
         <Button 
             Grid.Row="2"
             Width="200"
