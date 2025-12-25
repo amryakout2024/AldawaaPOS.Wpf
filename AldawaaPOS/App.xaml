@@ -2,14 +2,14 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:AldawaaPOS"
-             xmlns:fa="http://schemas.fontawesome.io/icons/"
-             StartupUri="StartingWindow.xaml">
+             xmlns:fa="http://schemas.fontawesome.io/icons/">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Helpers/DataTemplate.xaml"/>
                 <ResourceDictionary Source="/Styles/StylesFaAwesome.xaml"/>
                 <ResourceDictionary Source="/Styles/StylesButton.xaml"/>
+                <ResourceDictionary Source="/Styles/StylesTextbox.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 

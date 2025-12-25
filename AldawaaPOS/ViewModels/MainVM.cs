@@ -8,5 +8,6 @@ namespace AldawaaPOS.ViewModels
 {
     class MainVM
     {
+
     }
 }

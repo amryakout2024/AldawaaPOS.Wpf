@@ -26,6 +26,7 @@ namespace AldawaaPOS.Views
         {
             InitializeComponent();
             _staffId = staffId;
+            mainTextbox.Focus();
             //StaffId.Text = staffId;
         }
 
