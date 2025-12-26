@@ -9,7 +9,7 @@
         Title="MainWindow">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
@@ -79,12 +79,35 @@
                     Content="loyalty sales"/>
                 </Grid>
             </Grid>
-            <DataGrid Grid.Row="1">
 
+            <DataGrid Grid.Row="1" Margin="5" Background="White">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="">
+                        <!--<DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate DataType="DataGridColumnHeader">
+                                --><!--<Border Background="Beige">
+                                    <Label  Content="" Background="Red"/>
+                                </Border>--><!--
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>-->
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Width="*" Header="Description"/>
+                    <DataGridTextColumn Header=""/>
+                    <DataGridTextColumn Width="0.2*" Header="Qty"/>
+                    <DataGridTextColumn Header="Stock"/>
+                    <DataGridTextColumn Header="D.S."/>
+                    <DataGridTextColumn Header="Price/Extend"/>
+                    <DataGridTextColumn Width="0.2*" Header="Expiry"/>
+                    <DataGridTextColumn Header="Disc./Amnt"/>
+                    <DataGridTextColumn Header="Vat/Net"/>
+                    <DataGridTextColumn Header="Cvrg/Share"/>
+                </DataGrid.Columns>
             </DataGrid>
-            <Grid Grid.Row="2" Background="Red">
+            
+            <Grid Grid.Row="2" Background="Red" Margin="5,0,5,0">
 
             </Grid>
+            
             <Grid Grid.Row="3">
                 <Grid.Resources>
                     <Style TargetType="TextBlock">

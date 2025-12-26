@@ -10,6 +10,7 @@
                 <ResourceDictionary Source="/Styles/StylesFaAwesome.xaml"/>
                 <ResourceDictionary Source="/Styles/StylesButton.xaml"/>
                 <ResourceDictionary Source="/Styles/StylesTextbox.xaml"/>
+                <ResourceDictionary Source="/Styles/StylesGrid.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
