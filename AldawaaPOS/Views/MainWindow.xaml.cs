@@ -34,5 +34,17 @@ namespace AldawaaPOS.Views
         {
             this.Close();
         }
+
+        private void more_Click(object sender, RoutedEventArgs e)
+        {
+            row2Primary.Visibility = Visibility.Collapsed;
+            row2Secondary.Visibility = Visibility.Visible;
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            row2Primary.Visibility = Visibility.Visible;
+            row2Secondary.Visibility = Visibility.Collapsed;
+        }
     }
 }

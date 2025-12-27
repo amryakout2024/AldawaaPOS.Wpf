@@ -80,7 +80,10 @@
                 </Grid>
             </Grid>
 
-            <DataGrid Grid.Row="1" Margin="5" Background="White">
+            <DataGrid Grid.Row="1" 
+                      VerticalScrollBarVisibility="Visible"
+                      Margin="7,5,5,5" 
+                      Background="White">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="">
                         <!--<DataGridTextColumn.HeaderTemplate>
@@ -103,8 +106,197 @@
                     <DataGridTextColumn Header="Cvrg/Share"/>
                 </DataGrid.Columns>
             </DataGrid>
+
+            <Grid Grid.Row="2" Visibility="Visible"
+                  x:Name="row2Primary"
+                  Margin="5,0,5,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Setter Property="VerticalAlignment" Value="Stretch"/>
+                        <Setter Property="Margin" Value="2"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                    </Style>
+                </Grid.Resources>
+                <Button Grid.Column="0" Grid.Row="0"
+                    Content="Sales"
+                    Background="DarkRed"/>
+                <Button Grid.Column="1" Grid.Row="0"
+                    Content="Qitaf"
+                    Background="DarkBlue"/>
+                <Button Grid.Column="0" Grid.Row="1"
+                    Content="Al rajhi mokafa"
+                    Background="DarkGoldenrod"/>
+                <Button Grid.Column="1" Grid.Row="1"
+                    Content="Mobily neqaty"
+                    Background="DarkCyan"/>
+                <Button Grid.Column="0" Grid.Row="2"
+                    Content="Employee Sales"
+                    Background="DarkMagenta"/>
+                <Button Grid.Column="1" Grid.Row="2"
+                    Content="Lab test"
+                    Background="DarkKhaki"/>
+                <Button Grid.Column="1" Grid.Row="3"
+                    Content="Takaful alarabia"
+                    Background="DarkViolet"/>
+                <Button Grid.Column="0" Grid.Row="3"
+                    Content="Exit"
+                    Background="IndianRed"/>
+
+                <!--third column buttons-->
+                
+                <Button Grid.Column="2" Grid.Row="0"
+                    Content="OMS"
+                    Background="DarkGreen"/>
+                <Button Grid.Column="2" Grid.Row="1"
+                    Content="Find invoice"
+                    Background="DarkBlue"/>
+                <Button Grid.Column="2" Grid.Row="2"
+                    Content="Return invoice"
+                    Background="DarkSalmon"/>
+                <Button Grid.Column="2" Grid.Row="3"
+                    Content="More" x:Name="more" Click="more_Click"
+                    Background="DarkOliveGreen"/>
+                <!--fourth Column Buttons-->
+                
+                <Button Grid.Column="3" Grid.Row="0"
+                    Content="Reports"
+                    Background="DarkMagenta"/>
+                <Button Grid.Column="3" Grid.Row="1"
+                    Content="POS login"
+                    Background="DarkGoldenrod"/>
+                <Button Grid.Column="3" Grid.Row="2"
+                    Content="Shelf stickers"
+                    Background="DarkKhaki"/>
+                <Button Grid.Column="3" Grid.Row="3"
+                    Content="Suspended Trx"
+                    Background="DarkGreen"/>
+
+                <!--fifth Column Buttons-->
+                
+                <Button Grid.Column="4" Grid.Row="0"
+                    Content="Naphies"
+                    Background="DarkSalmon"/>
+                <Button Grid.Column="4" Grid.Row="1"
+                    Content="Insurance"
+                    Background="DarkOrchid"/>
+                <Button Grid.Column="4" Grid.Row="2"
+                    Content="Credit Sales"
+                    Background="DarkSlateGray"/>
+                <Button Grid.Column="4" Grid.Row="3"
+                    Content="TCS"
+                    Background="DarkSlateBlue"/>
+            </Grid>
             
-            <Grid Grid.Row="2" Background="Red" Margin="5,0,5,0">
+            <Grid Grid.Row="2" Visibility="Collapsed"
+                  x:Name="row2Secondary"
+                  Margin="5,0,5,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Setter Property="VerticalAlignment" Value="Stretch"/>
+                        <Setter Property="Margin" Value="2"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                    </Style>
+                </Grid.Resources>
+                <Button Grid.Column="0" Grid.Row="0"
+                    Content="Cash clearance"
+                    Background="DarkRed"/>
+                <Button Grid.Column="1" Grid.Row="0"
+                    Content="Cura"
+                    Background="DarkBlue"/>
+                <Button Grid.Column="0" Grid.Row="1"
+                    Content="Gift card"
+                    Background="DarkGoldenrod"/>
+                <Button Grid.Column="1" Grid.Row="1"
+                    Content="SFDA"
+                    Background="DarkCyan"/>
+                <Button Grid.Column="0" Grid.Row="2"
+                    Content="Add loyalty"
+                    Background="DarkMagenta"/>
+                <Button Grid.Column="1" Grid.Row="2"
+                    Content="Assign card"
+                    Background="DarkKhaki"/>
+                <Button Grid.Column="1" Grid.Row="3"
+                    Content="Print invoice"
+                    Background="DarkViolet"/>
+                <Button Grid.Column="0" Grid.Row="3"
+                    Content="Drs"
+                    Background="IndianRed"/>
+
+                <!--third column buttons-->
+                
+                <Button Grid.Column="2" Grid.Row="0"
+                    Content="Print last invoice"
+                    Background="DarkGreen"/>
+                <Button Grid.Column="2" Grid.Row="1"
+                    Content="DAWAOK"
+                    Background="DarkBlue"/>
+                <Button Grid.Column="2" Grid.Row="2"
+                    Content="Print invoice"
+                    Background="DarkSalmon"/>
+                <Button Grid.Column="2" Grid.Row="3"
+                    Content="Notify customer"
+                    Background="DarkOliveGreen"/>
+                <!--fourth Column Buttons-->
+                
+                <Button Grid.Column="3" Grid.Row="0"
+                    Content="Promotions activation"
+                    Background="DarkMagenta"/>
+                <Button Grid.Column="3" Grid.Row="1"
+                    Content="Alternative items"
+                    Background="DarkGoldenrod"/>
+                <Button Grid.Column="3" Grid.Row="2"
+                    Content="Loyalty follow"
+                    Background="DarkKhaki"/>
+                <Button Grid.Column="3" Grid.Row="3"
+                    Content="Check price"
+                    Background="DarkGreen"/>
+
+                <!--fifth Column Buttons-->
+
+                <Button Grid.Column="4" Grid.Row="0"
+                    Content="My address"
+                    Background="DarkSalmon"/>
+                <Button Grid.Column="4" Grid.Row="1"
+                    Content="Barcode print"
+                    Background="DarkOrchid"/>
+                <Button Grid.Column="4" Grid.Row="2"
+                    Content="Check points"
+                    Background="DarkSlateGray"/>
+                <Button Grid.Column="4" Grid.Row="3"
+                    Content="Back" x:Name="back" Click="back_Click"
+                    Background="DarkSlateBlue"/>
 
             </Grid>
             
