@@ -357,6 +357,65 @@
                 </Border>
             </Grid>
         </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="IndianRed"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Margin" Value="1"/>
+                            <Setter Property="FontSize" Value="12"/>
+                        </Style>
+                    </Grid.Resources>
+                    <Button Grid.Row="0"
+                            Content="Switch to order"/>
+                    <Button Grid.Row="1"
+                            Content="Special stock"/>
+                    <Button Grid.Row="2"
+                            Content="Missing item"/>
+                </Grid>
+                <StackPanel Grid.Column="1"
+                            Margin="10,10,0,0">
+                    <StackPanel.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="Margin" Value="2"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock>
+                        <Run Text="Data version #" FontWeight="Bold"/>
+                        <Run Text="20261201"/>
+                    </TextBlock>
+                    <TextBlock>
+                        <Run Text="POS version #" FontWeight="Bold"/>
+                        <Run Text="26.12.3.0"/>
+                    </TextBlock>
+                    <TextBlock>
+                        <Run Text="Version date #" FontWeight="Bold"/>
+                        <Run Text="01/12/2026"/>
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+            <TextBox Grid.Row="2"
+                     VerticalScrollBarVisibility="Visible" 
+                     IsReadOnly="True"
+                     Margin="2,5,5,5"/>
+        </Grid>
     </Grid>
 </Window>
 <!--<TextBlock
