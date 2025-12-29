@@ -366,7 +366,7 @@
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="4*"/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
                     <Grid.RowDefinitions>
@@ -411,6 +411,313 @@
                     </TextBlock>
                 </StackPanel>
             </Grid>
+            <Grid Grid.Row="1">
+                <Grid.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="FontSize" Value="14"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                    </Style>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Trx type"
+                               Foreground="DarkGreen"
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Margin="20,0,0,0"
+                               Foreground="DarkGreen"
+                               Text="Cash"/>
+                    </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                    </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Lines count" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text="0.00"/>
+                    </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                    </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Qty count" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text="0.00"/>
+                    </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                    </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Total" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text="0.00"/>
+                    </Grid>
+                <Grid Grid.Row="4">
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                    </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Discount" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text="0.00"/>
+                    </Grid>
+                <Grid Grid.Row="5">
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                    </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Promo disc" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text="0.00"/>
+                    </Grid>
+                <Grid Grid.Row="6">
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                    </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Vat" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text="0.00"/>
+                    </Grid>
+                <Grid Grid.Row="7">
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                    </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Delivery fees" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text="0.00"/>
+                    </Grid>
+                <Grid Grid.Row="8">
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                    </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Picking fees" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text="0.00"/>
+                    </Grid>
+                <Grid Grid.Row="9">
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                    </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Payment" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text="0.00"/>
+                    </Grid>
+                <Grid Grid.Row="10">
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                    </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Balance" FontSize="16" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text="0.00"/>
+                    </Grid>
+                <Grid Grid.Row="11">
+                    <Border 
+                        Margin="10" 
+                        Background="Black"
+                        HorizontalAlignment="Stretch"
+                        Height="5"/>
+                </Grid>
+                <Grid Grid.Row="12">
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                    </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Wasfaty plus" Foreground="DarkGreen" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text="0.00"/>
+                    </Grid>
+                <Grid Grid.Row="13">
+                    <Border 
+                        Margin="10" 
+                        Background="Black"
+                        HorizontalAlignment="Stretch"
+                        Height="5"/>
+                </Grid>
+                <Grid Grid.Row="14">
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" 
+                               FontWeight="Normal"
+                               Foreground="SteelBlue" 
+                               Text="Order No." 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text=""/>
+                    </Grid>
+                <Grid Grid.Row="15">
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Order store."                              
+                               FontWeight="Normal"
+                               Foreground="SteelBlue" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text=""/>
+                    </Grid>
+                <Grid Grid.Row="16">
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Customer Phone." 
+                               FontWeight="Normal"
+                               Foreground="SteelBlue" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text=""/>
+                    </Grid>
+                <Grid Grid.Row="17">
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="Customer Name." 
+                               FontWeight="Normal"
+                               Foreground="SteelBlue" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1"
+                               Text=""/>
+                    </Grid>
+                </Grid>
             <TextBox Grid.Row="2"
                      VerticalScrollBarVisibility="Visible" 
                      IsReadOnly="True"
