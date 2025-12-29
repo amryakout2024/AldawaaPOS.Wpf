@@ -14,7 +14,7 @@ namespace AldawaaPOS
         {
             base.OnStartup(e);
 
-            MainWindow = new MainWindow("9744");
+            MainWindow = new StartingWindow();
 
             MainWindow.Show();
         }

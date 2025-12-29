@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AldawaaPOS.Views"
-        mc:Ignorable="d" WindowStyle="ThreeDBorderWindow" WindowState="Maximized"
+        mc:Ignorable="d" WindowStyle="None" WindowState="Maximized"
         WindowStartupLocation="CenterScreen" Width="800" Height="500"
         Title="MainWindow">
     <Grid>
@@ -155,14 +155,49 @@
                     Content="Takaful alarabia"
                     Background="DarkViolet"/>
                 <Button Grid.Column="0" Grid.Row="3"
-                    Content="Exit"
+                    Content="Exit" x:Name="Exit" Click="Exit_Click"
                     Background="IndianRed"/>
 
                 <!--third column buttons-->
-                
-                <Button Grid.Column="2" Grid.Row="0"
-                    Content="OMS"
-                    Background="DarkGreen"/>
+
+                <Button Grid.Column="2" Grid.Row="0">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid Background="DarkGreen">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Foreground="White"
+                                                FontWeight="Bold"
+                                                FontSize="14"
+                                                Content="OMS"/>
+                                            <Border Grid.Column="1" 
+                                                    Margin="5"
+                                                    CornerRadius="20"
+                                                    Height="30"
+                                                    VerticalAlignment="Top"
+                                                    Background="Red">
+                                                <Label
+                                                    Content="18"
+                                                    FontSize="12"
+                                                    FontWeight="Bold"
+                                                    VerticalAlignment="Stretch"
+                                                    Foreground="White"/>
+                                            </Border>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
                 <Button Grid.Column="2" Grid.Row="1"
                     Content="Find invoice"
                     Background="DarkBlue"/>
@@ -183,9 +218,44 @@
                 <Button Grid.Column="3" Grid.Row="2"
                     Content="Shelf stickers"
                     Background="DarkKhaki"/>
-                <Button Grid.Column="3" Grid.Row="3"
-                    Content="Suspended Trx"
-                    Background="DarkGreen"/>
+                <Button Grid.Column="3" Grid.Row="3">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid Background="DarkGreen">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Foreground="White"
+                                                FontWeight="Bold"
+                                                FontSize="14"
+                                                Content="Suspended Trx"/>
+                                            <Border Grid.Column="1" 
+                                                    Margin="5"
+                                                    CornerRadius="20"
+                                                    Height="30"
+                                                    VerticalAlignment="Top"
+                                                    Background="Red">
+                                                <Label
+                                                    Content="1"
+                                                    FontSize="12"
+                                                    FontWeight="Bold"
+                                                    VerticalAlignment="Stretch"
+                                                    Foreground="White"/>
+                                            </Border>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
 
                 <!--fifth Column Buttons-->
                 
