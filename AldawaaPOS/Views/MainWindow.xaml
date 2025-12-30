@@ -394,14 +394,14 @@
                     Grid.Column="0">
                     <TextBlock>
                         <Run Text="Staff ID :"/>
-                        <Run Text="9744"/>
+                        <Run x:Name="lblId"/>
                     </TextBlock>
                 </Border>
                 <Border
                     Grid.Column="1">
                     <TextBlock>
                         <Run Text="Trx no :"/>
-                        <Run Text="10548948"/>
+                        <Run Text="7991254569962656"/>
                     </TextBlock>
                 </Border>
                 <Border
@@ -422,7 +422,7 @@
                     Grid.Column="4">
                     <TextBlock>
                         <Run Text="Date time :"/>
-                        <Run Text="12/25/2025"/>
+                        <Run x:Name="lblDate"/>
                     </TextBlock>
                 </Border>
             </Grid>
@@ -436,7 +436,7 @@
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
                     <Grid.RowDefinitions>
