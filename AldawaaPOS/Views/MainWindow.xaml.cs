@@ -1,6 +1,7 @@
 ﻿using AldawaaPOS.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,6 +53,14 @@ namespace AldawaaPOS.Views
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://www.al-dawaa.com/")
+            {
+                UseShellExecute = true 
+            });
         }
     }
 }
