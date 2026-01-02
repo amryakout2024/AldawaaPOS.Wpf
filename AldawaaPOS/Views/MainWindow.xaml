@@ -90,13 +90,27 @@
                 </Grid>
                 <Grid Grid.Row="2">
                     <Button
-                    Grid.Column="0" Padding="30,0,30,0"
+                    Grid.Column="0"
                         Background="DarkSlateBlue"
-                        Foreground="White"
-                    VerticalAlignment="Center" 
-                    FontSize="14"
-                    HorizontalAlignment="Center"
-                    Content="loyalty sales"/>
+                        VerticalAlignment="Center" 
+                        FontSize="14"
+                        HorizontalAlignment="Center"
+                        Content="loyalty sales">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="Padding" Value="30,0,30,0"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Foreground" Value="DarkBlue"/>
+                                    </Trigger>
+                                    <Trigger Property="IsMouseCaptured" Value="True">
+                                        <Setter Property="Padding" Value="35,0,25,0"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
                 </Grid>
             </Grid>
 
@@ -471,8 +485,8 @@
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
+                <RowDefinition Height="3*"/>
                 <RowDefinition Height="2*"/>
-                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
