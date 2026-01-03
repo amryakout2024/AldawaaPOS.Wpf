@@ -315,7 +315,7 @@
                 <!--fifth Column Buttons-->
                 
                 <Button Grid.Column="4" Grid.Row="0"
-                    Content="Naphies"
+                    Content="Naphies" x:Name="btnNaphies" Click="btnNaphies_Click"
                     Background="DarkSalmon"/>
                 <Button Grid.Column="4" Grid.Row="1"
                     Content="Insurance"

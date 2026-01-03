@@ -62,5 +62,12 @@ namespace AldawaaPOS.Views
                 UseShellExecute = true 
             });
         }
+
+        private void btnNaphies_Click(object sender, RoutedEventArgs e)
+        {
+            NaphiesWindow naphiesWindow = new NaphiesWindow();
+
+            naphiesWindow.ShowDialog();
+        }
     }
 }

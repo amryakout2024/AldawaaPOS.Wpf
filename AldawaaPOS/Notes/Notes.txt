@@ -1,4 +1,27 @@
 ﻿    
+                    <!--<Rectangle
+                        Grid.Column="2"
+                        Width="30"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Fill="Gray">
+                        <Rectangle.OpacityMask>
+                            -->
+                    <!-- Use the original image as the mask -->
+                    <!--
+                            <ImageBrush 
+                                            ImageSource="/Images/upsquared2.png"/>
+                        </Rectangle.OpacityMask>
+                    </Rectangle>-->
+                    <!--<DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate DataType="DataGridColumnHeader">
+                                -->
+                    <!--<Border Background="Beige">
+                                    <Label  Content="" Background="Red"/>
+                                </Border>-->
+                    <!--
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>-->
                         <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Background" Value="IndianRed"/>
