@@ -38,7 +38,7 @@
                     VerticalAlignment="Top"
             HorizontalAlignment="Right">
             <fa:ImageAwesome Icon="WindowMinimize" Style="{StaticResource FaMiniStyle}" Name="FaMini" MouseDown="FaMini_MouseDown"/>
-            <fa:ImageAwesome Icon="WindowMaximize" Style="{StaticResource FaMaxStyle}" Name="FaMax" MouseDown="FaMax_MouseDown"/>
+            <!--<fa:ImageAwesome Icon="WindowMaximize" Style="{StaticResource FaMaxStyle}" Name="FaMax" MouseDown="FaMax_MouseDown"/>-->
             <fa:ImageAwesome Icon="Close" Style="{StaticResource FaCloseStyle}" Name="FaClose" MouseDown="FaClose_MouseDown"/>
         </StackPanel>
 
@@ -77,10 +77,23 @@
                     FontSize="16"
                     Text="Payer"/>
 
-                    <TextBox Height="35"
-                    Grid.Row="0" Grid.Column="1"
-                    Style="{StaticResource MainTextBoxStyle}"
-                    Margin="5,0,5,0"/>
+                    <ComboBox Grid.Row="0" Grid.Column="1"
+                          Style="{StaticResource ComboBoxStyle}" 
+                          Margin="5 0 5 0"
+                          HorizontalAlignment="Stretch" 
+                          Tag="Select insurance company" 
+                          Foreground="Black">
+                    <!--ItemsSource="{Binding SourceCollection}" DisplayMemberPath="KeLoHeName" 
+                          SelectedItem="{Binding SelectedKeLoHe}" SelectedIndex="{Binding SelectedKeLoHeIndex}">-->
+                        <ComboBoxItem Content="Al-Etihad"/>
+                        <ComboBoxItem Content="Bupa"/>
+                        <ComboBoxItem Content="Malath"/>
+                        <ComboBoxItem Content="Medgulf"/>
+                        <ComboBoxItem Content="TCS-Buruj"/>
+                        <ComboBoxItem Content="TCS-UCA"/>
+                        <ComboBoxItem Content="TCS-Alsagar"/>
+                        <ComboBoxItem Content="TCS-Trade union"/>
+                    </ComboBox>
 
                     <TextBlock Grid.Row="1" Grid.Column="0"
                     VerticalAlignment="Center" 
@@ -88,7 +101,7 @@
                     Text="Patient ID"/>
 
                     <TextBox Height="35"
-                    Grid.Row="1" Grid.Column="1"
+                    Grid.Row="1" Grid.Column="1" Tag="Enter valid id number" 
                     Style="{StaticResource MainTextBoxStyle}"
                     Margin="5,0,5,0"/>
 
@@ -98,7 +111,7 @@
                         Text="PreAuth ref"/>
 
                     <TextBox Height="35"
-                    Grid.Row="2" Grid.Column="1"
+                    Grid.Row="2" Grid.Column="1" Tag="Enter Preauthorization number"
                         Style="{StaticResource MainTextBoxStyle}"
                         Margin="5,0,5,0"/>
 
@@ -107,7 +120,7 @@
                         FontSize="16"
                         Text="From Date"/>
 
-                    <DatePicker Grid.Row="3" Grid.Column="1"
+                    <DatePicker Grid.Row="3" Grid.Column="1" Tag="Select date"
                     Style="{StaticResource DatePickerStyle}" />
                     <!--SelectedDate="{Binding DateStart,UpdateSourceTrigger=PropertyChanged}"/>-->
 
@@ -117,7 +130,7 @@
                         Text="To Date"/>
 
                     <DatePicker 
-                    Grid.Row="4" Grid.Column="1"
+                    Grid.Row="4" Grid.Column="1" Tag="Select date"
                     Style="{StaticResource DatePickerStyle}" />
                     <!--SelectedDate="{Binding DateStart,UpdateSourceTrigger=PropertyChanged}"/>-->
 

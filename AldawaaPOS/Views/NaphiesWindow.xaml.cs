@@ -74,18 +74,18 @@ namespace AldawaaPOS.Views
 
         private void mainGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            if (e.ClickCount == 2)
-            {
-                if (nw.WindowState == WindowState.Normal)
-                {
-                    nw.WindowState = WindowState.Maximized;
-                }
-                else if (nw.WindowState == WindowState.Maximized)
-                {
-                    nw.WindowState = WindowState.Normal;
-                }
+            //if (e.ClickCount == 2)
+            //{
+            //    if (nw.WindowState == WindowState.Normal)
+            //    {
+            //        nw.WindowState = WindowState.Maximized;
+            //    }
+            //    else if (nw.WindowState == WindowState.Maximized)
+            //    {
+            //        nw.WindowState = WindowState.Normal;
+            //    }
 
-            }
+            //}
         }
     }
 }

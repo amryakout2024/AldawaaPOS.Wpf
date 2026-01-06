@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Style x:Key="DatePickerCalendarStyle" TargetType="{x:Type Calendar}">
+    <!--<Style x:Key="DatePickerCalendarStyle" TargetType="{x:Type Calendar}">
         <Setter Property="Foreground" Value="{StaticResource cs_TextColor}"/>
         <Setter Property="Background" Value="{StaticResource cs_BorderBrush}"/>
         <Setter Property="BorderBrush" Value="{StaticResource cs_Background}"/>
@@ -10,7 +10,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Calendar}">
                     <StackPanel x:Name="PART_Root"
-                                HorizontalAlignment="Center">
+                                HorizontalAlignment="Left">
                         <CalendarItem x:Name="PART_CalendarItem"
                                       Background="{TemplateBinding Background}"
                                       BorderBrush="{TemplateBinding BorderBrush}"
@@ -21,7 +21,7 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-    </Style>
+    </Style>-->
 
     <Style x:Key="DatePickerStyle" TargetType="{x:Type DatePicker}">
         <Setter Property="VerticalAlignment" Value="Center"/>
@@ -44,20 +44,18 @@
                                     <ColumnDefinition Width="50"/>
                                 </Grid.ColumnDefinitions>
                                 <DatePickerTextBox x:Name="PART_TextBox"
-                                                   Text="Select date"
-                                                   Foreground="Black"
+                                                   Foreground="DarkBlue"
                                                    BorderThickness="0"
                                                    Grid.Column="0"
+                                                   Text="   "
                                                    Margin="2,0,2,0"
+                                                   IsReadOnly="True"
                                                    HorizontalAlignment="Stretch"
                                                    HorizontalContentAlignment="Center"
                                                    FontFamily="Roboto"
                                                    FontSize="16"
                                                    VerticalAlignment="Center"
                                                    Padding="0 1 0 1"/>
-                                <!--<Image Source="/Images/aldawaa.png"  
-                                        x:Name="PART_Button"
-                                        Grid.Column="1"/>-->
                                 <Button Content="Show"  
                                         x:Name="PART_Button"
                                         Style="{StaticResource DateButtonStyle}"
@@ -68,15 +66,15 @@
                                        PlacementTarget="{Binding ElementName=PART_TextBox}"
                                        StaysOpen="False"
                                        HorizontalOffset="17"/>
-                                <!--<Label x:Name="Watermark"
+                                <Label x:Name="Watermark"
                                        VerticalAlignment="Center"
-                                       HorizontalAlignment="Left"
-                                       Foreground="red"
+                                       HorizontalAlignment="Center"
+                                       Foreground="Silver"
                                        Visibility="Collapsed"
                                        Padding="11 0 20 0"
                                        Content="{TemplateBinding Tag}"
                                        FontFamily="Roboto"
-                                       FontSize="11"/>-->
+                                       FontSize="16"/>
                             </Grid>
                         </Border>
                     </Grid>
@@ -86,14 +84,14 @@
                         </Trigger>
                         <Trigger Property="IsKeyboardFocused" Value="True">
                             <Setter Property="BorderBrush" Value="Goldenrod" TargetName="Border"/>
-                            <Setter Property="BorderThickness" Value="0.5 0.5 0.5 3" TargetName="Border"/>
+                            <Setter Property="BorderThickness" Value="1" TargetName="Border"/>
                         </Trigger>
-                        <!--<MultiTrigger>
+                        <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="Text" Value=""/>
                             </MultiTrigger.Conditions>
                             <Setter Property="Visibility" Value="Visible" TargetName="Watermark"/>
-                        </MultiTrigger>-->
+                        </MultiTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -132,7 +130,7 @@
                                 <Button Content="عرض"
                                         FontSize="10"
                                         x:Name="PART_Button"
-                                        Style="{StaticResource ButtonStyle}"
+                                        Style="{StaticResource DateButtonStyle}"
                                         Grid.Column="1"/>
                                 <Popup x:Name="PART_Popup"
                                        AllowsTransparency="True"

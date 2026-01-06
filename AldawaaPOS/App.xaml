@@ -13,6 +13,7 @@
                 <ResourceDictionary Source="/Styles/StylesGrid.xaml"/>
                 <ResourceDictionary Source="/Styles/StylesDatePicker.xaml"/>
                 <ResourceDictionary Source="/Styles/StylesColor.xaml"/>
+                <ResourceDictionary Source="/Styles/StylesComboBox.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 

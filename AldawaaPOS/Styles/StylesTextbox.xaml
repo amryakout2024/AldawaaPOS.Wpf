@@ -43,7 +43,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
-                    <Border 
+                    <Border x:Name="Border"
                             Background="{TemplateBinding Background}" 
                             CornerRadius="5"
                             BorderThickness="{TemplateBinding BorderThickness}"
@@ -55,7 +55,7 @@
                                           VerticalScrollBarVisibility="Hidden"/>
                             <Label x:Name="back" 
                              Content="{TemplateBinding Tag}" 
-                             HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                             HorizontalContentAlignment="Center"
                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
                              Foreground="Silver"
                              Padding="{TemplateBinding Padding}" 
@@ -69,8 +69,19 @@
                             </ItemsControl>
                         </Grid>
                     </Border>
+                    <!--<Label x:Name="back" 
+                             Content="{TemplateBinding Tag}" 
+                             HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                             VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                             Foreground="Silver"
+                             Padding="{TemplateBinding Padding}" 
+                             Visibility="Collapsed"/>-->
 
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="Goldenrod" TargetName="Border"/>
+                        </Trigger>
+
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="Text" Value=""/>
