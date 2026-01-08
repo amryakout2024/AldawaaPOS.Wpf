@@ -266,25 +266,43 @@
 
             </Grid>
         </Grid>
-        <DataGrid Grid.Row="2" 
-                      VerticalScrollBarVisibility="Visible"
+        <DataGrid Grid.Row="2" ItemsSource="{Binding Approvals}"
+                      VerticalScrollBarVisibility="Visible" 
+                  AutoGenerateColumns="False" FontWeight="DemiBold"
                   HorizontalScrollBarVisibility="Visible"
-                      Margin="7,5,5,5" 
+                      Margin="7,5,5,5" CanUserAddRows="False"
+                  CanUserDeleteRows="False" CanUserReorderColumns="False"
+                  CanUserResizeRows="False" IsReadOnly="True" FontSize="16"
                       Background="White">
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Status}" Value="Rejected">
+                            <Setter Property="Background" Value="PaleVioletRed" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Status}" Value="Approved">
+                            <Setter Property="Background" Value="LightSeaGreen" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Status}" Value="Pending">
+                            <Setter Property="Background" Value="LightGoldenrodYellow" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
             <DataGrid.Columns>
                 <DataGridTextColumn Header=""/>
-                <DataGridTextColumn Header="Type" Width="0.5*"/>
-                <DataGridTextColumn Header="Patient name" Width="*"/>
-                <DataGridTextColumn Header="Patient Id" Width="*"/>
-                <DataGridTextColumn Header="Bayer" Width="*"/>
-                <DataGridTextColumn Header="Request time" Width="*"/>
-                <DataGridTextColumn Header="Response time" Width="*"/>
-                <DataGridTextColumn Header="Approval status" Width="*"/>
-                <DataGridCheckBoxColumn Header="Is invoiced"/>
-                <DataGridCheckBoxColumn Header="Error"/>
-                <DataGridCheckBoxColumn Header="Need comment"/>
-                <DataGridCheckBoxColumn Header="Is Dispensed"/>
-                <DataGridCheckBoxColumn Header="Is cancelled"/>
+                <DataGridTextColumn Header="Type" Binding="{Binding Type}" Width="0.5*"/>
+                <DataGridTextColumn Header="Patient name" Binding="{Binding PatientName}" Width="*"/>
+                <DataGridTextColumn Header="Patient Id" Binding="{Binding PatientId}" Width="*"/>
+                <DataGridTextColumn Header="Bayer" Binding="{Binding Bayer}" Width="*"/>
+                <DataGridTextColumn Header="Request time" Binding="{Binding RequestTime}" Width="*"/>
+                <DataGridTextColumn Header="Response time" Binding="{Binding ResponseTime}" Width="*"/>
+                <DataGridTextColumn Header="Approval status" Binding="{Binding Status}" Width="*"/>
+                <DataGridCheckBoxColumn Header="Is invoiced" Binding="{Binding IsInvoiced}"/>
+                <DataGridCheckBoxColumn Header="Error" Binding="{Binding HasError}"/>
+                <DataGridCheckBoxColumn Header="Need comment" Binding="{Binding HasComment}"/>
+                <DataGridCheckBoxColumn Header="Is Dispensed" Binding="{Binding IsDispensed}"/>
+                <DataGridCheckBoxColumn Header="Is cancelled" Binding="{Binding IsCancelled}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

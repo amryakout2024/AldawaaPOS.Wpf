@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AldawaaPOS.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,9 +18,15 @@ namespace AldawaaPOS.Views
     /// </summary>
     public partial class NaphiesWindow : Window
     {
+        NaphiesVM naphiesVM;
+
         public NaphiesWindow()
         {
             InitializeComponent();
+
+            naphiesVM = new NaphiesVM();
+
+            this.DataContext = naphiesVM;
         }
 
         private void close_Click(object sender, RoutedEventArgs e)

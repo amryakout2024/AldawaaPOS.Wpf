@@ -56,7 +56,7 @@
                                Padding="0 0 0 0"
                                Content="{TemplateBinding Tag}"
                                FontFamily="Roboto"
-                               FontSize="14"/>
+                               FontSize="16"/>
                         <!--#region tb -->
                         <!--<TextBox x:Name="PART_EditableTextBox" Background="DarkGray"
                                  Template="{DynamicResource ComboBoxTextBox}"
